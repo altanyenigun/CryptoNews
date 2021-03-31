@@ -1,0 +1,97 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="UserRegister.aspx.cs" Inherits="Project.Web.TemplateForProject.UserRegister" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<title>Kullanıcı Kayıt</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->	
+	<link rel="icon" type="image/png" href="assets/img2/icons/favicon.ico"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="assets/vendor2/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="assets/fonts2/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="assets/fonts2/iconic/css/material-design-iconic-font.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="assets/vendor2/animate/animate.css">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="assets/vendor2/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="assets/vendor2/animsition/css/animsition.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="assets/vendor2/select2/select2.min.css">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="assets/vendor2/daterangepicker/daterangepicker.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="assets/css2/util.css">
+	<link rel="stylesheet" type="text/css" href="assets/css2/main.css">
+<!--===============================================================================================-->
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="limiter">
+		<div class="container-login100" style="background-image: url('assets/img2/btc.jpg');">
+			<div class="wrap-login100">
+				<form class="login100-form validate-form">
+					<span class="login100-form-logo">
+						<i class="zmdi zmdi-landscape"></i>
+					</span>
+
+					<span class="login100-form-title p-b-34 p-t-27">
+						KAYIT SAYFASI
+					</span>
+					<div class="wrap-input100 validate-input" data-validate = "Enter username">
+						<input class="input101" type="text" name="username" placeholder="Ad">
+					</div>
+					<div class="wrap-input100 validate-input" data-validate="Enter password">
+						<input class="input101" type="text" name="pass" placeholder="Soyad">
+					</div>
+					<div class="wrap-input100 validate-input" data-validate = "Enter username">
+						<input class="input101" type="text" name="username" placeholder="Kullanıcı Adı">
+					</div>
+					<div class="wrap-input100 validate-input" data-validate = "Enter username">
+						<input class="input101" type="text" name="username" placeholder="E-mail">
+					</div>
+					<div class="wrap-input100 validate-input" data-validate = "Enter username">
+						<input class="input101" type="password" name="username" placeholder="Şifre">
+					</div>
+					<div class="wrap-input100 validate-input" data-validate = "Enter username">
+						<input class="input101" type="password" name="username" placeholder="Şifre Tekrar">
+					</div>
+
+					<div class="container-login100-form-btn">
+						<button class="login100-form-btn">
+							Kayıt Ol
+						</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	
+
+	<div id="dropDownSelect1"></div>
+	
+<!--===============================================================================================-->
+	<script src="assets/vendor2/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="assets/vendor2/animsition/js/animsition.min.js"></script>
+<!--===============================================================================================-->
+	<script src="assets/vendor2/bootstrap/js/popper.js"></script>
+	<script src="assets/vendor2/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="assets/vendor2/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+	<script src="assets/vendor2/daterangepicker/moment.min.js"></script>
+	<script src="assets/vendor2/daterangepicker/daterangepicker.js"></script>
+<!--===============================================================================================-->
+	<script src="assets/vendor2/countdowntime/countdowntime.js"></script>
+<!--===============================================================================================-->
+	<script src="assets/js2/main.js"></script>
+
+    </form>
+</body>
+</html>
