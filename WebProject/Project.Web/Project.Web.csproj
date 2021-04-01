@@ -210,12 +210,9 @@
     <Content Include="TemplateForProject\Default.aspx" />
     <Content Include="TemplateForProject\forms\contact.php" />
     <Content Include="TemplateForProject\forms\Readme.txt" />
-    <Content Include="TemplateForProject\index.html" />
     <Content Include="TemplateForProject\inner-page.html" />
-    <Content Include="TemplateForProject\login.html" />
     <Content Include="TemplateForProject\portfolio-details.html" />
     <Content Include="TemplateForProject\Readme.txt" />
-    <Content Include="TemplateForProject\register.html" />
     <Content Include="TemplateForProject\UserLogin.aspx" />
     <Content Include="TemplateForProject\UserRegister.aspx" />
     <Content Include="Web.config" />
