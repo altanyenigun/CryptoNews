@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="denemeModelStoreContainer" CdmEntityContainer="denemeEntities">
+    <EntitySetMapping Name="OgrBilgiTablosu">
+      <EntityTypeMapping TypeName="denemeModel.OgrBilgiTablosu">
+        <MappingFragment StoreEntitySet="OgrBilgiTablosu">
+          <ScalarProperty Name="OgrBilgiId" ColumnName="OgrBilgiId" />
+          <ScalarProperty Name="OgrNo" ColumnName="OgrNo" />
+          <ScalarProperty Name="OgrAd" ColumnName="OgrAd" />
+          <ScalarProperty Name="OgrTcNo" ColumnName="OgrTcNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OgrNotlari">
+      <EntityTypeMapping TypeName="denemeModel.OgrNotlari">
+        <MappingFragment StoreEntitySet="OgrNotlari">
+          <ScalarProperty Name="OgrNotId" ColumnName="OgrNotId" />
+          <ScalarProperty Name="OgrBilgiFkId" ColumnName="OgrBilgiFkId" />
+          <ScalarProperty Name="OgrDersAdi" ColumnName="OgrDersAdi" />
+          <ScalarProperty Name="OgrDersNotu" ColumnName="OgrDersNotu" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

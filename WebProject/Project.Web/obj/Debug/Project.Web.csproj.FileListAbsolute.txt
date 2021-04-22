@@ -57,3 +57,13 @@ D:\WebTabanliProje\Gp\WebProject\Project.Web\obj\Debug\Project.Web.csproj.CoreCo
 D:\WebTabanliProje\Gp\WebProject\Project.Web\obj\Debug\Project.Web.csproj.CopyComplete
 D:\WebTabanliProje\Gp\WebProject\Project.Web\obj\Debug\Project.Web.dll
 D:\WebTabanliProje\Gp\WebProject\Project.Web\obj\Debug\Project.Web.pdb
+D:\WebTabanliProje\Gp\WebProject\Project.Web\bin\Proje.Business.dll
+D:\WebTabanliProje\Gp\WebProject\Project.Web\bin\Proje.DataAccess.dll
+D:\WebTabanliProje\Gp\WebProject\Project.Web\bin\EntityFramework.dll
+D:\WebTabanliProje\Gp\WebProject\Project.Web\bin\Proje.Business.pdb
+D:\WebTabanliProje\Gp\WebProject\Project.Web\bin\Proje.DataAccess.pdb
+D:\WebTabanliProje\Gp\WebProject\Project.Web\bin\Proje.DataAccess.dll.config
+D:\WebTabanliProje\Gp\WebProject\Project.Web\bin\EntityFramework.xml
+D:\WebTabanliProje\Gp\WebProject\Project.Web\bin\EntityFramework.SqlServer.dll
+D:\WebTabanliProje\Gp\WebProject\Project.Web\bin\Proje.Business.dll.config
+D:\WebTabanliProje\Gp\WebProject\Project.Web\bin\EntityFramework.SqlServer.xml

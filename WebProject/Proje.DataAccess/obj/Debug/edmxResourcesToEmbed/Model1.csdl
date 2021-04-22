@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="denemeModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="OgrBilgiTablosu">
+    <Key>
+      <PropertyRef Name="OgrBilgiId" />
+    </Key>
+    <Property Name="OgrBilgiId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OgrNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="OgrAd" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="OgrTcNo" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="OgrNotlari" Relationship="Self.FK_OgrNotlari_OgrBilgiTablosu" FromRole="OgrBilgiTablosu" ToRole="OgrNotlari" />
+  </EntityType>
+  <EntityType Name="OgrNotlari">
+    <Key>
+      <PropertyRef Name="OgrNotId" />
+    </Key>
+    <Property Name="OgrNotId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OgrBilgiFkId" Type="Int32" />
+    <Property Name="OgrDersAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="OgrDersNotu" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="OgrBilgiTablosu" Relationship="Self.FK_OgrNotlari_OgrBilgiTablosu" FromRole="OgrNotlari" ToRole="OgrBilgiTablosu" />
+  </EntityType>
+  <Association Name="FK_OgrNotlari_OgrBilgiTablosu">
+    <End Role="OgrBilgiTablosu" Type="Self.OgrBilgiTablosu" Multiplicity="0..1" />
+    <End Role="OgrNotlari" Type="Self.OgrNotlari" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OgrBilgiTablosu">
+        <PropertyRef Name="OgrBilgiId" />
+      </Principal>
+      <Dependent Role="OgrNotlari">
+        <PropertyRef Name="OgrBilgiFkId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="denemeEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="OgrBilgiTablosu" EntityType="Self.OgrBilgiTablosu" />
+    <EntitySet Name="OgrNotlari" EntityType="Self.OgrNotlari" />
+    <AssociationSet Name="FK_OgrNotlari_OgrBilgiTablosu" Association="Self.FK_OgrNotlari_OgrBilgiTablosu">
+      <End Role="OgrBilgiTablosu" EntitySet="OgrBilgiTablosu" />
+      <End Role="OgrNotlari" EntitySet="OgrNotlari" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

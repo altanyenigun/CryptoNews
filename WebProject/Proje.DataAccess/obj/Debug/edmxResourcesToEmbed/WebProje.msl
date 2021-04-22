@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="WebProjeDBModelStoreContainer" CdmEntityContainer="WebProjeDBEntities">
+    <EntitySetMapping Name="ADAKayit">
+      <EntityTypeMapping TypeName="WebProjeDBModel.ADAKayit">
+        <MappingFragment StoreEntitySet="ADAKayit">
+          <ScalarProperty Name="islem_no" ColumnName="islem_no" />
+          <ScalarProperty Name="kullanici_no" ColumnName="kullanici_no" />
+          <ScalarProperty Name="coin_no" ColumnName="coin_no" />
+          <ScalarProperty Name="coin_miktar" ColumnName="coin_miktar" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ADASohbet">
+      <EntityTypeMapping TypeName="WebProjeDBModel.ADASohbet">
+        <MappingFragment StoreEntitySet="ADASohbet">
+          <ScalarProperty Name="Sohbet_No" ColumnName="Sohbet_No" />
+          <ScalarProperty Name="kullanici_no" ColumnName="kullanici_no" />
+          <ScalarProperty Name="kullanici_mesaj" ColumnName="kullanici_mesaj" />
+          <ScalarProperty Name="gonderim_tarih" ColumnName="gonderim_tarih" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BNBKayit">
+      <EntityTypeMapping TypeName="WebProjeDBModel.BNBKayit">
+        <MappingFragment StoreEntitySet="BNBKayit">
+          <ScalarProperty Name="islem_no" ColumnName="islem_no" />
+          <ScalarProperty Name="kullanici_no" ColumnName="kullanici_no" />
+          <ScalarProperty Name="coin_no" ColumnName="coin_no" />
+          <ScalarProperty Name="coin_miktar" ColumnName="coin_miktar" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BNBSohbet">
+      <EntityTypeMapping TypeName="WebProjeDBModel.BNBSohbet">
+        <MappingFragment StoreEntitySet="BNBSohbet">
+          <ScalarProperty Name="Sohbet_No" ColumnName="Sohbet_No" />
+          <ScalarProperty Name="kullanici_no" ColumnName="kullanici_no" />
+          <ScalarProperty Name="kullanici_mesaj" ColumnName="kullanici_mesaj" />
+          <ScalarProperty Name="gonderim_tarih" ColumnName="gonderim_tarih" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BTCKayit">
+      <EntityTypeMapping TypeName="WebProjeDBModel.BTCKayit">
+        <MappingFragment StoreEntitySet="BTCKayit">
+          <ScalarProperty Name="islem_no" ColumnName="islem_no" />
+          <ScalarProperty Name="kullanici_no" ColumnName="kullanici_no" />
+          <ScalarProperty Name="coin_no" ColumnName="coin_no" />
+          <ScalarProperty Name="coin_miktar" ColumnName="coin_miktar" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BTCSohbet">
+      <EntityTypeMapping TypeName="WebProjeDBModel.BTCSohbet">
+        <MappingFragment StoreEntitySet="BTCSohbet">
+          <ScalarProperty Name="Sohbet_No" ColumnName="Sohbet_No" />
+          <ScalarProperty Name="kullanici_no" ColumnName="kullanici_no" />
+          <ScalarProperty Name="kullanici_mesaj" ColumnName="kullanici_mesaj" />
+          <ScalarProperty Name="gönderim_tarih" ColumnName="gönderim_tarih" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CoinDeger">
+      <EntityTypeMapping TypeName="WebProjeDBModel.CoinDeger">
+        <MappingFragment StoreEntitySet="CoinDeger">
+          <ScalarProperty Name="islem_no" ColumnName="islem_no" />
+          <ScalarProperty Name="coin_no" ColumnName="coin_no" />
+          <ScalarProperty Name="coin_deger" ColumnName="coin_deger" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CoinList">
+      <EntityTypeMapping TypeName="WebProjeDBModel.CoinList">
+        <MappingFragment StoreEntitySet="CoinList">
+          <ScalarProperty Name="CoinNo" ColumnName="CoinNo" />
+          <ScalarProperty Name="CoinAd" ColumnName="CoinAd" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DOTKayit">
+      <EntityTypeMapping TypeName="WebProjeDBModel.DOTKayit">
+        <MappingFragment StoreEntitySet="DOTKayit">
+          <ScalarProperty Name="islem_no" ColumnName="islem_no" />
+          <ScalarProperty Name="kullanici_no" ColumnName="kullanici_no" />
+          <ScalarProperty Name="coin_no" ColumnName="coin_no" />
+          <ScalarProperty Name="coin_miktar" ColumnName="coin_miktar" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DOTSohbet">
+      <EntityTypeMapping TypeName="WebProjeDBModel.DOTSohbet">
+        <MappingFragment StoreEntitySet="DOTSohbet">
+          <ScalarProperty Name="Sohbet_No" ColumnName="Sohbet_No" />
+          <ScalarProperty Name="kullanici_no" ColumnName="kullanici_no" />
+          <ScalarProperty Name="kullanici_mesaj" ColumnName="kullanici_mesaj" />
+          <ScalarProperty Name="gonderim_tarih" ColumnName="gonderim_tarih" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ETHKayit">
+      <EntityTypeMapping TypeName="WebProjeDBModel.ETHKayit">
+        <MappingFragment StoreEntitySet="ETHKayit">
+          <ScalarProperty Name="islem_no" ColumnName="islem_no" />
+          <ScalarProperty Name="kullanici_no" ColumnName="kullanici_no" />
+          <ScalarProperty Name="coin_no" ColumnName="coin_no" />
+          <ScalarProperty Name="coin_miktar" ColumnName="coin_miktar" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Haberler">
+      <EntityTypeMapping TypeName="WebProjeDBModel.Haberler">
+        <MappingFragment StoreEntitySet="Haberler">
+          <ScalarProperty Name="Haber_No" ColumnName="Haber_No" />
+          <ScalarProperty Name="Haber_Baslik" ColumnName="Haber_Baslik" />
+          <ScalarProperty Name="Haber_Gorsel" ColumnName="Haber_Gorsel" />
+          <ScalarProperty Name="Haber_Metin" ColumnName="Haber_Metin" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="islemKayitlari">
+      <EntityTypeMapping TypeName="WebProjeDBModel.islemKayitlari">
+        <MappingFragment StoreEntitySet="islemKayitlari">
+          <ScalarProperty Name="islem_no" ColumnName="islem_no" />
+          <ScalarProperty Name="kullanici_no" ColumnName="kullanici_no" />
+          <ScalarProperty Name="coin_no" ColumnName="coin_no" />
+          <ScalarProperty Name="coin_deger" ColumnName="coin_deger" />
+          <ScalarProperty Name="islem_tarih" ColumnName="islem_tarih" />
+          <ScalarProperty Name="kazanc" ColumnName="kazanc" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Uyeler">
+      <EntityTypeMapping TypeName="WebProjeDBModel.Uyeler">
+        <MappingFragment StoreEntitySet="Uyeler">
+          <ScalarProperty Name="Kullanici_No" ColumnName="Kullanici_No" />
+          <ScalarProperty Name="Kullanici_Nick" ColumnName="Kullanici_Nick" />
+          <ScalarProperty Name="Kullanici_Ad" ColumnName="Kullanici_Ad" />
+          <ScalarProperty Name="Kullanici_Soyad" ColumnName="Kullanici_Soyad" />
+          <ScalarProperty Name="e_posta" ColumnName="e_posta" />
+          <ScalarProperty Name="profilfot" ColumnName="profilfot" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ETHSohbet">
+      <EntityTypeMapping TypeName="WebProjeDBModel.ETHSohbet">
+        <MappingFragment StoreEntitySet="ETHSohbet">
+          <ScalarProperty Name="Sohbet_No" ColumnName="Sohbet_No" />
+          <ScalarProperty Name="kullanici_no" ColumnName="kullanici_no" />
+          <ScalarProperty Name="kullanici_mesaj" ColumnName="kullanici_mesaj" />
+          <ScalarProperty Name="gönderim_tarih" ColumnName="gönderim_tarih" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="b5fdff77c36141d68ad977a10eed3cfa" Name="Diagram1">
+        <EntityTypeShape EntityType="WebProjeDBModel.ADAKayit" Width="1.5" PointX="6" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebProjeDBModel.ADASohbet" Width="1.5" PointX="3" PointY="14.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebProjeDBModel.BNBKayit" Width="1.5" PointX="6" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebProjeDBModel.BNBSohbet" Width="1.5" PointX="3" PointY="19.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebProjeDBModel.BTCKayit" Width="1.5" PointX="6" PointY="19.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebProjeDBModel.BTCSohbet" Width="1.5" PointX="3" PointY="25.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebProjeDBModel.CoinDeger" Width="1.5" PointX="3" PointY="7.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebProjeDBModel.CoinList" Width="1.5" PointX="0.75" PointY="10.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebProjeDBModel.DOTKayit" Width="1.5" PointX="3" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebProjeDBModel.DOTSohbet" Width="1.5" PointX="3" PointY="31.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebProjeDBModel.ETHKayit" Width="1.5" PointX="9" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebProjeDBModel.Haberler" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebProjeDBModel.islemKayitlari" Width="1.5" PointX="9" PointY="12.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebProjeDBModel.Uyeler" Width="1.5" PointX="0.75" PointY="15.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebProjeDBModel.ETHSohbet" Width="1.5" PointX="3" PointY="40.125" IsExpanded="true" />
+        <AssociationConnector Association="WebProjeDBModel.FK_ADAKayit_CoinList" ManuallyRouted="false" />
+        <AssociationConnector Association="WebProjeDBModel.FK_ADAKayit_Uyeler" ManuallyRouted="false" />
+        <AssociationConnector Association="WebProjeDBModel.FK_ADASohbet_Uyeler" ManuallyRouted="false" />
+        <AssociationConnector Association="WebProjeDBModel.FK_BNBKayit_CoinList" ManuallyRouted="false" />
+        <AssociationConnector Association="WebProjeDBModel.FK_BNBKayit_Uyeler" ManuallyRouted="false" />
+        <AssociationConnector Association="WebProjeDBModel.FK_BNBSohbet_Uyeler" ManuallyRouted="false" />
+        <AssociationConnector Association="WebProjeDBModel.FK_BTCKayit_CoinList" ManuallyRouted="false" />
+        <AssociationConnector Association="WebProjeDBModel.FK_BTCKayit_Uyeler" ManuallyRouted="false" />
+        <AssociationConnector Association="WebProjeDBModel.FK_BTCSohbet_Uyeler" ManuallyRouted="false" />
+        <AssociationConnector Association="WebProjeDBModel.FK_CoinDeger_CoinList" ManuallyRouted="false" />
+        <AssociationConnector Association="WebProjeDBModel.FK_DOTKayit_CoinList" ManuallyRouted="false" />
+        <AssociationConnector Association="WebProjeDBModel.FK_ETHKayit_CoinList" ManuallyRouted="false" />
+        <AssociationConnector Association="WebProjeDBModel.FK_islemKayitlari_CoinList" ManuallyRouted="false" />
+        <AssociationConnector Association="WebProjeDBModel.FK_DOTKayit_Uyeler" ManuallyRouted="false" />
+        <AssociationConnector Association="WebProjeDBModel.FK_DOTSohbet_Uyeler" ManuallyRouted="false" />
+        <AssociationConnector Association="WebProjeDBModel.FK_ETHKayit_Uyeler" ManuallyRouted="false" />
+        <AssociationConnector Association="WebProjeDBModel.FK_islemKayitlari_Uyeler" ManuallyRouted="false" />
+        <AssociationConnector Association="WebProjeDBModel.FK_ETHSohbet_Uyeler" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

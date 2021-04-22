@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="denemeModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="OgrBilgiTablosu">
+    <Key>
+      <PropertyRef Name="OgrBilgiId" />
+    </Key>
+    <Property Name="OgrBilgiId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="OgrNo" Type="varchar" MaxLength="50" />
+    <Property Name="OgrAd" Type="varchar" MaxLength="100" />
+    <Property Name="OgrTcNo" Type="varchar" MaxLength="11" />
+  </EntityType>
+  <EntityType Name="OgrNotlari">
+    <Key>
+      <PropertyRef Name="OgrNotId" />
+    </Key>
+    <Property Name="OgrNotId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="OgrBilgiFkId" Type="int" />
+    <Property Name="OgrDersAdi" Type="varchar" MaxLength="50" />
+    <Property Name="OgrDersNotu" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <Association Name="FK_OgrNotlari_OgrBilgiTablosu">
+    <End Role="OgrBilgiTablosu" Type="Self.OgrBilgiTablosu" Multiplicity="0..1" />
+    <End Role="OgrNotlari" Type="Self.OgrNotlari" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OgrBilgiTablosu">
+        <PropertyRef Name="OgrBilgiId" />
+      </Principal>
+      <Dependent Role="OgrNotlari">
+        <PropertyRef Name="OgrBilgiFkId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="denemeModelStoreContainer">
+    <EntitySet Name="OgrBilgiTablosu" EntityType="Self.OgrBilgiTablosu" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="OgrNotlari" EntityType="Self.OgrNotlari" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_OgrNotlari_OgrBilgiTablosu" Association="Self.FK_OgrNotlari_OgrBilgiTablosu">
+      <End Role="OgrBilgiTablosu" EntitySet="OgrBilgiTablosu" />
+      <End Role="OgrNotlari" EntitySet="OgrNotlari" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

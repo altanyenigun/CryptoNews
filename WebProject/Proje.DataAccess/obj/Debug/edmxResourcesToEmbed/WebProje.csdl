@@ -1,0 +1,481 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="WebProjeDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="ADAKayit">
+    <Key>
+      <PropertyRef Name="islem_no" />
+    </Key>
+    <Property Name="islem_no" Type="Int32" Nullable="false" />
+    <Property Name="kullanici_no" Type="Int32" Nullable="false" />
+    <Property Name="coin_no" Type="Int32" Nullable="false" />
+    <Property Name="coin_miktar" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <NavigationProperty Name="CoinList" Relationship="Self.FK_ADAKayit_CoinList" FromRole="ADAKayit" ToRole="CoinList" />
+    <NavigationProperty Name="Uyeler" Relationship="Self.FK_ADAKayit_Uyeler" FromRole="ADAKayit" ToRole="Uyeler" />
+  </EntityType>
+  <EntityType Name="ADASohbet">
+    <Key>
+      <PropertyRef Name="Sohbet_No" />
+    </Key>
+    <Property Name="Sohbet_No" Type="Int32" Nullable="false" />
+    <Property Name="kullanici_no" Type="Int32" Nullable="false" />
+    <Property Name="kullanici_mesaj" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="gonderim_tarih" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Uyeler" Relationship="Self.FK_ADASohbet_Uyeler" FromRole="ADASohbet" ToRole="Uyeler" />
+  </EntityType>
+  <EntityType Name="BNBKayit">
+    <Key>
+      <PropertyRef Name="islem_no" />
+    </Key>
+    <Property Name="islem_no" Type="Int32" Nullable="false" />
+    <Property Name="kullanici_no" Type="Int32" Nullable="false" />
+    <Property Name="coin_no" Type="Int32" Nullable="false" />
+    <Property Name="coin_miktar" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <NavigationProperty Name="CoinList" Relationship="Self.FK_BNBKayit_CoinList" FromRole="BNBKayit" ToRole="CoinList" />
+    <NavigationProperty Name="Uyeler" Relationship="Self.FK_BNBKayit_Uyeler" FromRole="BNBKayit" ToRole="Uyeler" />
+  </EntityType>
+  <EntityType Name="BNBSohbet">
+    <Key>
+      <PropertyRef Name="Sohbet_No" />
+    </Key>
+    <Property Name="Sohbet_No" Type="Int32" Nullable="false" />
+    <Property Name="kullanici_no" Type="Int32" Nullable="false" />
+    <Property Name="kullanici_mesaj" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="gonderim_tarih" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Uyeler" Relationship="Self.FK_BNBSohbet_Uyeler" FromRole="BNBSohbet" ToRole="Uyeler" />
+  </EntityType>
+  <EntityType Name="BTCKayit">
+    <Key>
+      <PropertyRef Name="islem_no" />
+    </Key>
+    <Property Name="islem_no" Type="Int32" Nullable="false" />
+    <Property Name="kullanici_no" Type="Int32" Nullable="false" />
+    <Property Name="coin_no" Type="Int32" Nullable="false" />
+    <Property Name="coin_miktar" Type="Int32" />
+    <NavigationProperty Name="CoinList" Relationship="Self.FK_BTCKayit_CoinList" FromRole="BTCKayit" ToRole="CoinList" />
+    <NavigationProperty Name="Uyeler" Relationship="Self.FK_BTCKayit_Uyeler" FromRole="BTCKayit" ToRole="Uyeler" />
+  </EntityType>
+  <EntityType Name="BTCSohbet">
+    <Key>
+      <PropertyRef Name="Sohbet_No" />
+    </Key>
+    <Property Name="Sohbet_No" Type="Int32" Nullable="false" />
+    <Property Name="kullanici_no" Type="Int32" />
+    <Property Name="kullanici_mesaj" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="gönderim_tarih" Type="DateTime" Precision="0" />
+    <NavigationProperty Name="Uyeler" Relationship="Self.FK_BTCSohbet_Uyeler" FromRole="BTCSohbet" ToRole="Uyeler" />
+  </EntityType>
+  <EntityType Name="CoinDeger">
+    <Key>
+      <PropertyRef Name="islem_no" />
+    </Key>
+    <Property Name="islem_no" Type="Int32" Nullable="false" />
+    <Property Name="coin_no" Type="Int32" />
+    <Property Name="coin_deger" Type="Int32" />
+    <NavigationProperty Name="CoinList" Relationship="Self.FK_CoinDeger_CoinList" FromRole="CoinDeger" ToRole="CoinList" />
+  </EntityType>
+  <EntityType Name="CoinList">
+    <Key>
+      <PropertyRef Name="CoinNo" />
+    </Key>
+    <Property Name="CoinNo" Type="Int32" Nullable="false" />
+    <Property Name="CoinAd" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <NavigationProperty Name="ADAKayit" Relationship="Self.FK_ADAKayit_CoinList" FromRole="CoinList" ToRole="ADAKayit" />
+    <NavigationProperty Name="BNBKayit" Relationship="Self.FK_BNBKayit_CoinList" FromRole="CoinList" ToRole="BNBKayit" />
+    <NavigationProperty Name="BTCKayit" Relationship="Self.FK_BTCKayit_CoinList" FromRole="CoinList" ToRole="BTCKayit" />
+    <NavigationProperty Name="CoinDeger" Relationship="Self.FK_CoinDeger_CoinList" FromRole="CoinList" ToRole="CoinDeger" />
+    <NavigationProperty Name="DOTKayit" Relationship="Self.FK_DOTKayit_CoinList" FromRole="CoinList" ToRole="DOTKayit" />
+    <NavigationProperty Name="ETHKayit" Relationship="Self.FK_ETHKayit_CoinList" FromRole="CoinList" ToRole="ETHKayit" />
+    <NavigationProperty Name="islemKayitlari" Relationship="Self.FK_islemKayitlari_CoinList" FromRole="CoinList" ToRole="islemKayitlari" />
+  </EntityType>
+  <EntityType Name="DOTKayit">
+    <Key>
+      <PropertyRef Name="islem_no" />
+    </Key>
+    <Property Name="islem_no" Type="Int32" Nullable="false" />
+    <Property Name="kullanici_no" Type="Int32" Nullable="false" />
+    <Property Name="coin_no" Type="Int32" Nullable="false" />
+    <Property Name="coin_miktar" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <NavigationProperty Name="CoinList" Relationship="Self.FK_DOTKayit_CoinList" FromRole="DOTKayit" ToRole="CoinList" />
+    <NavigationProperty Name="Uyeler" Relationship="Self.FK_DOTKayit_Uyeler" FromRole="DOTKayit" ToRole="Uyeler" />
+  </EntityType>
+  <EntityType Name="DOTSohbet">
+    <Key>
+      <PropertyRef Name="Sohbet_No" />
+    </Key>
+    <Property Name="Sohbet_No" Type="Int32" Nullable="false" />
+    <Property Name="kullanici_no" Type="Int32" Nullable="false" />
+    <Property Name="kullanici_mesaj" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="gonderim_tarih" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Uyeler" Relationship="Self.FK_DOTSohbet_Uyeler" FromRole="DOTSohbet" ToRole="Uyeler" />
+  </EntityType>
+  <EntityType Name="ETHKayit">
+    <Key>
+      <PropertyRef Name="islem_no" />
+    </Key>
+    <Property Name="islem_no" Type="Int32" Nullable="false" />
+    <Property Name="kullanici_no" Type="Int32" Nullable="false" />
+    <Property Name="coin_no" Type="Int32" Nullable="false" />
+    <Property Name="coin_miktar" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <NavigationProperty Name="CoinList" Relationship="Self.FK_ETHKayit_CoinList" FromRole="ETHKayit" ToRole="CoinList" />
+    <NavigationProperty Name="Uyeler" Relationship="Self.FK_ETHKayit_Uyeler" FromRole="ETHKayit" ToRole="Uyeler" />
+  </EntityType>
+  <EntityType Name="Haberler">
+    <Key>
+      <PropertyRef Name="Haber_No" />
+    </Key>
+    <Property Name="Haber_No" Type="Int32" Nullable="false" />
+    <Property Name="Haber_Baslik" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Haber_Gorsel" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Haber_Metin" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="islemKayitlari">
+    <Key>
+      <PropertyRef Name="islem_no" />
+    </Key>
+    <Property Name="islem_no" Type="Int32" Nullable="false" />
+    <Property Name="kullanici_no" Type="Int32" />
+    <Property Name="coin_no" Type="Int32" />
+    <Property Name="coin_deger" Type="Int32" />
+    <Property Name="islem_tarih" Type="DateTime" Precision="0" />
+    <Property Name="kazanc" Type="Int32" />
+    <NavigationProperty Name="CoinList" Relationship="Self.FK_islemKayitlari_CoinList" FromRole="islemKayitlari" ToRole="CoinList" />
+    <NavigationProperty Name="Uyeler" Relationship="Self.FK_islemKayitlari_Uyeler" FromRole="islemKayitlari" ToRole="Uyeler" />
+  </EntityType>
+  <EntityType Name="Uyeler">
+    <Key>
+      <PropertyRef Name="Kullanici_No" />
+    </Key>
+    <Property Name="Kullanici_No" Type="Int32" Nullable="false" />
+    <Property Name="Kullanici_Nick" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Kullanici_Ad" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Kullanici_Soyad" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="e_posta" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="profilfot" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="ADAKayit" Relationship="Self.FK_ADAKayit_Uyeler" FromRole="Uyeler" ToRole="ADAKayit" />
+    <NavigationProperty Name="ADASohbet" Relationship="Self.FK_ADASohbet_Uyeler" FromRole="Uyeler" ToRole="ADASohbet" />
+    <NavigationProperty Name="BNBKayit" Relationship="Self.FK_BNBKayit_Uyeler" FromRole="Uyeler" ToRole="BNBKayit" />
+    <NavigationProperty Name="BNBSohbet" Relationship="Self.FK_BNBSohbet_Uyeler" FromRole="Uyeler" ToRole="BNBSohbet" />
+    <NavigationProperty Name="BTCKayit" Relationship="Self.FK_BTCKayit_Uyeler" FromRole="Uyeler" ToRole="BTCKayit" />
+    <NavigationProperty Name="BTCSohbet" Relationship="Self.FK_BTCSohbet_Uyeler" FromRole="Uyeler" ToRole="BTCSohbet" />
+    <NavigationProperty Name="DOTKayit" Relationship="Self.FK_DOTKayit_Uyeler" FromRole="Uyeler" ToRole="DOTKayit" />
+    <NavigationProperty Name="DOTSohbet" Relationship="Self.FK_DOTSohbet_Uyeler" FromRole="Uyeler" ToRole="DOTSohbet" />
+    <NavigationProperty Name="ETHKayit" Relationship="Self.FK_ETHKayit_Uyeler" FromRole="Uyeler" ToRole="ETHKayit" />
+    <NavigationProperty Name="islemKayitlari" Relationship="Self.FK_islemKayitlari_Uyeler" FromRole="Uyeler" ToRole="islemKayitlari" />
+    <NavigationProperty Name="ETHSohbet" Relationship="Self.FK_ETHSohbet_Uyeler" FromRole="Uyeler" ToRole="ETHSohbet" />
+  </EntityType>
+  <EntityType Name="ETHSohbet">
+    <Key>
+      <PropertyRef Name="Sohbet_No" />
+      <PropertyRef Name="kullanici_no" />
+    </Key>
+    <Property Name="Sohbet_No" Type="Int32" Nullable="false" />
+    <Property Name="kullanici_no" Type="Int32" Nullable="false" />
+    <Property Name="kullanici_mesaj" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="gönderim_tarih" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Uyeler" Relationship="Self.FK_ETHSohbet_Uyeler" FromRole="ETHSohbet" ToRole="Uyeler" />
+  </EntityType>
+  <Association Name="FK_ADAKayit_CoinList">
+    <End Role="CoinList" Type="Self.CoinList" Multiplicity="1" />
+    <End Role="ADAKayit" Type="Self.ADAKayit" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CoinList">
+        <PropertyRef Name="CoinNo" />
+      </Principal>
+      <Dependent Role="ADAKayit">
+        <PropertyRef Name="coin_no" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ADAKayit_Uyeler">
+    <End Role="Uyeler" Type="Self.Uyeler" Multiplicity="1" />
+    <End Role="ADAKayit" Type="Self.ADAKayit" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Uyeler">
+        <PropertyRef Name="Kullanici_No" />
+      </Principal>
+      <Dependent Role="ADAKayit">
+        <PropertyRef Name="kullanici_no" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ADASohbet_Uyeler">
+    <End Role="Uyeler" Type="Self.Uyeler" Multiplicity="1" />
+    <End Role="ADASohbet" Type="Self.ADASohbet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Uyeler">
+        <PropertyRef Name="Kullanici_No" />
+      </Principal>
+      <Dependent Role="ADASohbet">
+        <PropertyRef Name="kullanici_no" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BNBKayit_CoinList">
+    <End Role="CoinList" Type="Self.CoinList" Multiplicity="1" />
+    <End Role="BNBKayit" Type="Self.BNBKayit" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CoinList">
+        <PropertyRef Name="CoinNo" />
+      </Principal>
+      <Dependent Role="BNBKayit">
+        <PropertyRef Name="coin_no" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BNBKayit_Uyeler">
+    <End Role="Uyeler" Type="Self.Uyeler" Multiplicity="1" />
+    <End Role="BNBKayit" Type="Self.BNBKayit" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Uyeler">
+        <PropertyRef Name="Kullanici_No" />
+      </Principal>
+      <Dependent Role="BNBKayit">
+        <PropertyRef Name="kullanici_no" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BNBSohbet_Uyeler">
+    <End Role="Uyeler" Type="Self.Uyeler" Multiplicity="1" />
+    <End Role="BNBSohbet" Type="Self.BNBSohbet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Uyeler">
+        <PropertyRef Name="Kullanici_No" />
+      </Principal>
+      <Dependent Role="BNBSohbet">
+        <PropertyRef Name="kullanici_no" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BTCKayit_CoinList">
+    <End Role="CoinList" Type="Self.CoinList" Multiplicity="1" />
+    <End Role="BTCKayit" Type="Self.BTCKayit" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CoinList">
+        <PropertyRef Name="CoinNo" />
+      </Principal>
+      <Dependent Role="BTCKayit">
+        <PropertyRef Name="coin_no" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BTCKayit_Uyeler">
+    <End Role="Uyeler" Type="Self.Uyeler" Multiplicity="1" />
+    <End Role="BTCKayit" Type="Self.BTCKayit" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Uyeler">
+        <PropertyRef Name="Kullanici_No" />
+      </Principal>
+      <Dependent Role="BTCKayit">
+        <PropertyRef Name="kullanici_no" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BTCSohbet_Uyeler">
+    <End Role="Uyeler" Type="Self.Uyeler" Multiplicity="0..1" />
+    <End Role="BTCSohbet" Type="Self.BTCSohbet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Uyeler">
+        <PropertyRef Name="Kullanici_No" />
+      </Principal>
+      <Dependent Role="BTCSohbet">
+        <PropertyRef Name="kullanici_no" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CoinDeger_CoinList">
+    <End Role="CoinList" Type="Self.CoinList" Multiplicity="0..1" />
+    <End Role="CoinDeger" Type="Self.CoinDeger" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CoinList">
+        <PropertyRef Name="CoinNo" />
+      </Principal>
+      <Dependent Role="CoinDeger">
+        <PropertyRef Name="coin_no" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DOTKayit_CoinList">
+    <End Role="CoinList" Type="Self.CoinList" Multiplicity="1" />
+    <End Role="DOTKayit" Type="Self.DOTKayit" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CoinList">
+        <PropertyRef Name="CoinNo" />
+      </Principal>
+      <Dependent Role="DOTKayit">
+        <PropertyRef Name="coin_no" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ETHKayit_CoinList">
+    <End Role="CoinList" Type="Self.CoinList" Multiplicity="1" />
+    <End Role="ETHKayit" Type="Self.ETHKayit" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CoinList">
+        <PropertyRef Name="CoinNo" />
+      </Principal>
+      <Dependent Role="ETHKayit">
+        <PropertyRef Name="coin_no" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_islemKayitlari_CoinList">
+    <End Role="CoinList" Type="Self.CoinList" Multiplicity="0..1" />
+    <End Role="islemKayitlari" Type="Self.islemKayitlari" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CoinList">
+        <PropertyRef Name="CoinNo" />
+      </Principal>
+      <Dependent Role="islemKayitlari">
+        <PropertyRef Name="coin_no" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DOTKayit_Uyeler">
+    <End Role="Uyeler" Type="Self.Uyeler" Multiplicity="1" />
+    <End Role="DOTKayit" Type="Self.DOTKayit" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Uyeler">
+        <PropertyRef Name="Kullanici_No" />
+      </Principal>
+      <Dependent Role="DOTKayit">
+        <PropertyRef Name="kullanici_no" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DOTSohbet_Uyeler">
+    <End Role="Uyeler" Type="Self.Uyeler" Multiplicity="1" />
+    <End Role="DOTSohbet" Type="Self.DOTSohbet" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Uyeler">
+        <PropertyRef Name="Kullanici_No" />
+      </Principal>
+      <Dependent Role="DOTSohbet">
+        <PropertyRef Name="Sohbet_No" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ETHKayit_Uyeler">
+    <End Role="Uyeler" Type="Self.Uyeler" Multiplicity="1" />
+    <End Role="ETHKayit" Type="Self.ETHKayit" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Uyeler">
+        <PropertyRef Name="Kullanici_No" />
+      </Principal>
+      <Dependent Role="ETHKayit">
+        <PropertyRef Name="kullanici_no" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_islemKayitlari_Uyeler">
+    <End Role="Uyeler" Type="Self.Uyeler" Multiplicity="0..1" />
+    <End Role="islemKayitlari" Type="Self.islemKayitlari" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Uyeler">
+        <PropertyRef Name="Kullanici_No" />
+      </Principal>
+      <Dependent Role="islemKayitlari">
+        <PropertyRef Name="kullanici_no" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ETHSohbet_Uyeler">
+    <End Role="Uyeler" Type="Self.Uyeler" Multiplicity="1" />
+    <End Role="ETHSohbet" Type="Self.ETHSohbet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Uyeler">
+        <PropertyRef Name="Kullanici_No" />
+      </Principal>
+      <Dependent Role="ETHSohbet">
+        <PropertyRef Name="kullanici_no" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="WebProjeDBEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="ADAKayit" EntityType="Self.ADAKayit" />
+    <EntitySet Name="ADASohbet" EntityType="Self.ADASohbet" />
+    <EntitySet Name="BNBKayit" EntityType="Self.BNBKayit" />
+    <EntitySet Name="BNBSohbet" EntityType="Self.BNBSohbet" />
+    <EntitySet Name="BTCKayit" EntityType="Self.BTCKayit" />
+    <EntitySet Name="BTCSohbet" EntityType="Self.BTCSohbet" />
+    <EntitySet Name="CoinDeger" EntityType="Self.CoinDeger" />
+    <EntitySet Name="CoinList" EntityType="Self.CoinList" />
+    <EntitySet Name="DOTKayit" EntityType="Self.DOTKayit" />
+    <EntitySet Name="DOTSohbet" EntityType="Self.DOTSohbet" />
+    <EntitySet Name="ETHKayit" EntityType="Self.ETHKayit" />
+    <EntitySet Name="Haberler" EntityType="Self.Haberler" />
+    <EntitySet Name="islemKayitlari" EntityType="Self.islemKayitlari" />
+    <EntitySet Name="Uyeler" EntityType="Self.Uyeler" />
+    <EntitySet Name="ETHSohbet" EntityType="Self.ETHSohbet" />
+    <AssociationSet Name="FK_ADAKayit_CoinList" Association="Self.FK_ADAKayit_CoinList">
+      <End Role="CoinList" EntitySet="CoinList" />
+      <End Role="ADAKayit" EntitySet="ADAKayit" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ADAKayit_Uyeler" Association="Self.FK_ADAKayit_Uyeler">
+      <End Role="Uyeler" EntitySet="Uyeler" />
+      <End Role="ADAKayit" EntitySet="ADAKayit" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ADASohbet_Uyeler" Association="Self.FK_ADASohbet_Uyeler">
+      <End Role="Uyeler" EntitySet="Uyeler" />
+      <End Role="ADASohbet" EntitySet="ADASohbet" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BNBKayit_CoinList" Association="Self.FK_BNBKayit_CoinList">
+      <End Role="CoinList" EntitySet="CoinList" />
+      <End Role="BNBKayit" EntitySet="BNBKayit" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BNBKayit_Uyeler" Association="Self.FK_BNBKayit_Uyeler">
+      <End Role="Uyeler" EntitySet="Uyeler" />
+      <End Role="BNBKayit" EntitySet="BNBKayit" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BNBSohbet_Uyeler" Association="Self.FK_BNBSohbet_Uyeler">
+      <End Role="Uyeler" EntitySet="Uyeler" />
+      <End Role="BNBSohbet" EntitySet="BNBSohbet" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BTCKayit_CoinList" Association="Self.FK_BTCKayit_CoinList">
+      <End Role="CoinList" EntitySet="CoinList" />
+      <End Role="BTCKayit" EntitySet="BTCKayit" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BTCKayit_Uyeler" Association="Self.FK_BTCKayit_Uyeler">
+      <End Role="Uyeler" EntitySet="Uyeler" />
+      <End Role="BTCKayit" EntitySet="BTCKayit" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BTCSohbet_Uyeler" Association="Self.FK_BTCSohbet_Uyeler">
+      <End Role="Uyeler" EntitySet="Uyeler" />
+      <End Role="BTCSohbet" EntitySet="BTCSohbet" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CoinDeger_CoinList" Association="Self.FK_CoinDeger_CoinList">
+      <End Role="CoinList" EntitySet="CoinList" />
+      <End Role="CoinDeger" EntitySet="CoinDeger" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DOTKayit_CoinList" Association="Self.FK_DOTKayit_CoinList">
+      <End Role="CoinList" EntitySet="CoinList" />
+      <End Role="DOTKayit" EntitySet="DOTKayit" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ETHKayit_CoinList" Association="Self.FK_ETHKayit_CoinList">
+      <End Role="CoinList" EntitySet="CoinList" />
+      <End Role="ETHKayit" EntitySet="ETHKayit" />
+    </AssociationSet>
+    <AssociationSet Name="FK_islemKayitlari_CoinList" Association="Self.FK_islemKayitlari_CoinList">
+      <End Role="CoinList" EntitySet="CoinList" />
+      <End Role="islemKayitlari" EntitySet="islemKayitlari" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DOTKayit_Uyeler" Association="Self.FK_DOTKayit_Uyeler">
+      <End Role="Uyeler" EntitySet="Uyeler" />
+      <End Role="DOTKayit" EntitySet="DOTKayit" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DOTSohbet_Uyeler" Association="Self.FK_DOTSohbet_Uyeler">
+      <End Role="Uyeler" EntitySet="Uyeler" />
+      <End Role="DOTSohbet" EntitySet="DOTSohbet" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ETHKayit_Uyeler" Association="Self.FK_ETHKayit_Uyeler">
+      <End Role="Uyeler" EntitySet="Uyeler" />
+      <End Role="ETHKayit" EntitySet="ETHKayit" />
+    </AssociationSet>
+    <AssociationSet Name="FK_islemKayitlari_Uyeler" Association="Self.FK_islemKayitlari_Uyeler">
+      <End Role="Uyeler" EntitySet="Uyeler" />
+      <End Role="islemKayitlari" EntitySet="islemKayitlari" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ETHSohbet_Uyeler" Association="Self.FK_ETHSohbet_Uyeler">
+      <End Role="Uyeler" EntitySet="Uyeler" />
+      <End Role="ETHSohbet" EntitySet="ETHSohbet" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

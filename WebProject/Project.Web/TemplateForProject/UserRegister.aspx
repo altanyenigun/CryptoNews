@@ -44,28 +44,26 @@
 						KAYIT SAYFASI
 					</span>
 					<div class="wrap-input100 validate-input" data-validate = "Enter username">
-						<input class="input101" type="text" name="username" placeholder="Ad">
+                        <asp:TextBox ID="kAd" runat="server" placeholder="Ad" class="input101"></asp:TextBox>
 					</div>
 					<div class="wrap-input100 validate-input" data-validate="Enter password">
-						<input class="input101" type="text" name="pass" placeholder="Soyad">
+						<asp:TextBox ID="kSoyad" runat="server" placeholder="Soyad" class="input101"></asp:TextBox>
 					</div>
 					<div class="wrap-input100 validate-input" data-validate = "Enter username">
-						<input class="input101" type="text" name="username" placeholder="Kullanıcı Adı">
+						<asp:TextBox ID="kNick" runat="server" placeholder="Nick" class="input101"></asp:TextBox>
 					</div>
 					<div class="wrap-input100 validate-input" data-validate = "Enter username">
-						<input class="input101" type="text" name="username" placeholder="E-mail">
+						<asp:TextBox ID="kEmail" runat="server" placeholder="E-mail" class="input101"></asp:TextBox>
 					</div>
 					<div class="wrap-input100 validate-input" data-validate = "Enter username">
-						<input class="input101" type="password" name="username" placeholder="Şifre">
+						<asp:TextBox ID="ksifre" runat="server" placeholder="Şifre" class="input101"></asp:TextBox>
 					</div>
 					<div class="wrap-input100 validate-input" data-validate = "Enter username">
-						<input class="input101" type="password" name="username" placeholder="Şifre Tekrar">
+						<asp:TextBox ID="ksifretekrar" runat="server" placeholder="Şifre Tekrar" class="input101"></asp:TextBox>
 					</div>
 
 					<div class="container-login100-form-btn">
-						<button class="login100-form-btn">
-							Kayıt Ol
-						</button>
+                        <asp:Button ID="Button1" runat="server" Text="Kayit Ol" class="login100-form-btn" OnClick="UyeKayit_Click" />
 					</div>
 				</form>
 			</div>

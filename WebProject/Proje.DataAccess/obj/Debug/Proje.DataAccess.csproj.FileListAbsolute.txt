@@ -1,0 +1,12 @@
+D:\WebTabanliProje\Gp\WebProject\Proje.DataAccess\bin\Debug\Proje.DataAccess.dll.config
+D:\WebTabanliProje\Gp\WebProject\Proje.DataAccess\bin\Debug\Proje.DataAccess.dll
+D:\WebTabanliProje\Gp\WebProject\Proje.DataAccess\bin\Debug\Proje.DataAccess.pdb
+D:\WebTabanliProje\Gp\WebProject\Proje.DataAccess\bin\Debug\EntityFramework.dll
+D:\WebTabanliProje\Gp\WebProject\Proje.DataAccess\bin\Debug\EntityFramework.SqlServer.dll
+D:\WebTabanliProje\Gp\WebProject\Proje.DataAccess\bin\Debug\EntityFramework.xml
+D:\WebTabanliProje\Gp\WebProject\Proje.DataAccess\bin\Debug\EntityFramework.SqlServer.xml
+D:\WebTabanliProje\Gp\WebProject\Proje.DataAccess\obj\Debug\Proje.DataAccess.csproj.CoreCompileInputs.cache
+D:\WebTabanliProje\Gp\WebProject\Proje.DataAccess\obj\Debug\Proje.DataAccess.csproj.CopyComplete
+D:\WebTabanliProje\Gp\WebProject\Proje.DataAccess\obj\Debug\Proje.DataAccess.dll
+D:\WebTabanliProje\Gp\WebProject\Proje.DataAccess\obj\Debug\Proje.DataAccess.pdb
+D:\WebTabanliProje\Gp\WebProject\Proje.DataAccess\obj\Debug\Proje.DataAccess.csprojAssemblyReference.cache

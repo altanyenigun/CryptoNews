@@ -1,0 +1,15 @@
+D:\WebTabanliProje\Gp\WebProject\Proje.Business\bin\Debug\Proje.Business.dll
+D:\WebTabanliProje\Gp\WebProject\Proje.Business\bin\Debug\Proje.Business.pdb
+D:\WebTabanliProje\Gp\WebProject\Proje.Business\bin\Debug\Proje.DataAccess.dll
+D:\WebTabanliProje\Gp\WebProject\Proje.Business\bin\Debug\EntityFramework.dll
+D:\WebTabanliProje\Gp\WebProject\Proje.Business\bin\Debug\Proje.DataAccess.pdb
+D:\WebTabanliProje\Gp\WebProject\Proje.Business\bin\Debug\Proje.DataAccess.dll.config
+D:\WebTabanliProje\Gp\WebProject\Proje.Business\bin\Debug\EntityFramework.xml
+D:\WebTabanliProje\Gp\WebProject\Proje.Business\obj\Debug\Proje.Business.csprojAssemblyReference.cache
+D:\WebTabanliProje\Gp\WebProject\Proje.Business\obj\Debug\Proje.Business.csproj.CoreCompileInputs.cache
+D:\WebTabanliProje\Gp\WebProject\Proje.Business\obj\Debug\Proje.Business.csproj.CopyComplete
+D:\WebTabanliProje\Gp\WebProject\Proje.Business\obj\Debug\Proje.Business.dll
+D:\WebTabanliProje\Gp\WebProject\Proje.Business\obj\Debug\Proje.Business.pdb
+D:\WebTabanliProje\Gp\WebProject\Proje.Business\bin\Debug\Proje.Business.dll.config
+D:\WebTabanliProje\Gp\WebProject\Proje.Business\bin\Debug\EntityFramework.SqlServer.dll
+D:\WebTabanliProje\Gp\WebProject\Proje.Business\bin\Debug\EntityFramework.SqlServer.xml
