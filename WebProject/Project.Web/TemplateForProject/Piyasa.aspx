@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="Project.Web.TemplateForProject.Default" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Piyasa.aspx.cs" Inherits="Project.Web.TemplateForProject.Piyasa" %>
 
 <!DOCTYPE html>
 
@@ -84,52 +84,25 @@
 
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="d-flex align-items-center justify-content-center">
-    <div class="container" data-aos="fade-up">
-
-      <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="150">
-        <div class="col-xl-6 col-lg-8">
-          <h1>Güncel Kripto Borsa ve Haber Sitesi<span>.</span></h1>
-          <h2>Anlık Haber ve Fiyat Takibi</h2>
-        </div>
-      </div>
-
-      <div class="row gy-4 mt-5 justify-content-center" data-aos="zoom-in" data-aos-delay="250">
-        <div class="col-xl-2 col-md-4">
-          <div class="icon-box">
-            <img src="assets/img/coin/bitcoin.png" class="img-fluid" alt=""/>
-            <h3><a href="">Bitcoin </a></h3>
-              <h3><a><asp:Label ID="btclabel" runat="server" Text="Label"></asp:Label></a></h3>
-          </div>
-        </div>
-        <div class="col-xl-2 col-md-4">
-          <div class="icon-box">
-            <img src="assets/img/coin/etherium.png" class="img-fluid" alt=""/>
-            <h3><a href="">Etherium</a></h3>
-               <h3><a><asp:Label ID="ethlabel" runat="server" Text="Label"></asp:Label></a></h3>
-          </div>
-        </div>
-        <div class="col-xl-2 col-md-4">
-          <div class="icon-box">
-            <img src="assets/img/coin/dot.png" class="img-fluid" alt=""/>
-            <h3><a href="">Polkadot</a></h3>
-               <h3><a><asp:Label ID="dotlabel" runat="server" Text="Label"></asp:Label></a></h3>
-          </div>
-        </div>
-        <div class="col-xl-2 col-md-4">
-          <div class="icon-box">
-            <img src="assets/img/coin/bnb.png" class="img-fluid" alt=""/>
-            <h3><a href="">BNB</a></h3>
-               <h3><a><asp:Label ID="bnblabel" runat="server" Text="Label"></asp:Label></a></h3>
-          </div>
-        </div>
-        <div class="col-xl-2 col-md-4">
-          <div class="icon-box">
-            <img src="assets/img/coin/ada.png" class="img-fluid" alt=""/>
-            <h3><a href="">Cardano</a></h3>
-               <h3><a><asp:Label ID="adalabel" runat="server" Text="Label"></asp:Label></a></h3>
-          </div>
-        </div>
-      </div>
+    <div  data-aos="fade-up">
+        <!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+  <div class="tradingview-widget-container__widget"></div>
+  <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/markets/cryptocurrencies/prices-all/" rel="noopener" target="_blank"><span class="blue-text">Cryptocurrency Markets</span></a> by TradingView</div>
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-screener.js" async>
+  {
+  "width": "1500",
+  "height": "700",
+  "defaultColumn": "overview",
+  "screener_type": "crypto_mkt",
+  "displayCurrency": "USD",
+  "colorTheme": "light",
+  "locale": "en"
+}
+  </script>
+</div>
+<!-- TradingView Widget END -->
+     
 
     </div>
   </section><!-- End Hero -->
@@ -148,43 +121,7 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
-       <!-- TradingView Widget BEGIN -->
-<div class="tradingview-widget-container">
-  <div class="tradingview-widget-container__widget"></div>
-  <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com" rel="noopener" target="_blank"><span class="blue-text">Ticker Tape</span></a> by TradingView</div>
-  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
-  {
-  "symbols": [
-    {
-      "proName": "BITSTAMP:BTCUSD",
-      "title": "BTC/USD"
-    },
-    {
-      "proName": "BITSTAMP:ETHUSD",
-      "title": "ETH/USD"
-    },
-    {
-      "description": "DOT/USD",
-      "proName": "BINANCE:DOTUSDT"
-    },
-    {
-      "description": "BNB/USD",
-      "proName": "BINANCE:BNBUSDT"
-    },
-    {
-      "description": "ADA/USD",
-      "proName": "BINANCE:ADAUSDT"
-    }
-  ],
-  "showSymbolLogo": true,
-  "colorTheme": "light",
-  "isTransparent": false,
-  "displayMode": "adaptive",
-  "locale": "en"
-}
-  </script>
-</div>
-<!-- TradingView Widget END -->
+       
     </form>
 </body>
 </html>

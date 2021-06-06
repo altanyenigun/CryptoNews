@@ -217,6 +217,7 @@
     <Content Include="TemplateForProject\forms\contact.php" />
     <Content Include="TemplateForProject\forms\Readme.txt" />
     <Content Include="TemplateForProject\inner-page.html" />
+    <Content Include="TemplateForProject\Piyasa.aspx" />
     <Content Include="TemplateForProject\portfolio-details.html" />
     <Content Include="TemplateForProject\Readme.txt" />
     <Content Include="TemplateForProject\test.aspx" />
@@ -232,6 +233,13 @@
     </Compile>
     <Compile Include="TemplateForProject\Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TemplateForProject\Piyasa.aspx.cs">
+      <DependentUpon>Piyasa.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TemplateForProject\Piyasa.aspx.designer.cs">
+      <DependentUpon>Piyasa.aspx</DependentUpon>
     </Compile>
     <Compile Include="TemplateForProject\test.aspx.cs">
       <DependentUpon>test.aspx</DependentUpon>

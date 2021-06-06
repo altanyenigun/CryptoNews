@@ -13,7 +13,7 @@ namespace Proje.Business
         public string html;
         public Uri url;
         string btcdeger;
-        public string btccek(string Url, string XPath)
+        public string degercek(string Url, string XPath)
         {
             url = new Uri(Url);
             WebClient client = new WebClient();

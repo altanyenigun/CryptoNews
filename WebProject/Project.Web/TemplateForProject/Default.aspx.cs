@@ -13,8 +13,13 @@ namespace Project.Web.TemplateForProject
         protected void Page_Load(object sender, EventArgs e)
         {
             Proje.Business.VeriCekme islem = new Proje.Business.VeriCekme();
-            btclabel.Text = islem.btccek("https://www.doviz.com/kripto-paralar", "//*[@id='coins']/tbody/tr[1]/td[2]");
-            
+            btclabel.Text = islem.degercek("https://www.doviz.com/kripto-paralar", "//*[@id='coins']/tbody/tr[1]/td[2]");
+            ethlabel.Text = islem.degercek("https://www.doviz.com/kripto-paralar","//*[@id='coins']/tbody/tr[2]/td[2]");
+            dotlabel.Text = islem.degercek("https://www.doviz.com/kripto-paralar", "//*[@id='coins']/tbody/tr[8]/td[2]");
+            bnblabel.Text = islem.degercek("https://www.doviz.com/kripto-paralar", "//*[@id='coins']/tbody/tr[4]/td[2]");
+            adalabel.Text = islem.degercek("https://www.doviz.com/kripto-paralar", "//*[@id='coins']/tbody/tr[5]/td[2]");
+
+
         }
     }
 }
