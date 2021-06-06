@@ -13,5 +13,15 @@ namespace Project.Web.TemplateForProject
         {
 
         }
+
+
+        protected void Button1_Click1(object sender, EventArgs e)
+        {
+            Proje.Business.UyeIslemler islem = new Proje.Business.UyeIslemler();
+            if(islem.Login(TextBox1.Text,TextBox2.Text) == "1" )
+            {
+                Response.Redirect("Default.aspx");
+            }
+        }
     }
 }

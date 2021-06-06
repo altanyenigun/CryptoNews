@@ -45,13 +45,11 @@
 					</span>
 
 					<div class="wrap-input100 validate-input" data-validate = "Enter username">
-						<input class="input100" type="text" name="username" placeholder="Kullanıcı Adı">
-						<span class="focus-input100" data-placeholder="&#xf207;"></span>
+                        <asp:TextBox ID="TextBox1" runat="server" class="input100" placeholder="Kullanıcı Ad"></asp:TextBox>
 					</div>
 
 					<div class="wrap-input100 validate-input" data-validate="Enter password">
-						<input class="input100" type="password" name="pass" placeholder="Şifre">
-						<span class="focus-input100" data-placeholder="&#xf191;"></span>
+						 <asp:TextBox ID="TextBox2" runat="server" class="input100" placeholder="Sifre"></asp:TextBox>
 					</div>
 
 					<div class="contact100-form-checkbox">
@@ -62,9 +60,9 @@
 					</div>
 
 					<div class="container-login100-form-btn">
-						<button class="login100-form-btn">
-							Giriş
-						</button>
+						
+							<asp:Button ID="Button1" runat="server" Text="Giriş" class="login100-form-btn" OnClick="Button1_Click1" /><asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+				
 					</div>
 
 					<div class="text-center p-t-90">

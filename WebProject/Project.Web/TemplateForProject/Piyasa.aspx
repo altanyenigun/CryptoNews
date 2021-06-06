@@ -7,7 +7,7 @@
   <meta charset="utf-8"/>
   <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 
-  <title>Kripto Haber Anasayfa</title>
+  <title>Piyasa</title>
   <meta content="" name="description"/>
   <meta content="" name="keywords"/>
 
@@ -50,26 +50,18 @@
 
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
-          <li><a class="nav-link scrollto active" href="#hero">Anasayfa</a></li>
-          <li><a class="nav-link scrollto" href="#about">Haberler</a></li>
-          <li><a class="nav-link scrollto" href="#services">Piyasa</a></li>
-          <li><a class="nav-link scrollto " href="#portfolio">Profil</a></li>
-          <li><a class="nav-link scrollto" href="#team">Sohbet</a></li>
+         <li><a class="nav-link scrollto active" href="Default.aspx">Anasayfa</a></li>
+                        <li><a class="nav-link scrollto" href="#about">Haberler</a></li>
+                        <li><a class="nav-link scrollto" href="Piyasa.aspx">Piyasa</a></li>
+                        <li><a class="nav-link scrollto " href="#portfolio">Profil</a></li>
+                        <li><a class="nav-link scrollto" href="../Sohbet.html">Sohbet</a></li>
           <li class="dropdown"><a href="#"><span>Grafikler</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
-              <li><a href="#">Drop Down 1</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
-                <ul>
-                  <li><a href="#">Deep Drop Down 1</a></li>
-                  <li><a href="#">Deep Drop Down 2</a></li>
-                  <li><a href="#">Deep Drop Down 3</a></li>
-                  <li><a href="#">Deep Drop Down 4</a></li>
-                  <li><a href="#">Deep Drop Down 5</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Drop Down 2</a></li>
-              <li><a href="#">Drop Down 3</a></li>
-              <li><a href="#">Drop Down 4</a></li>
+              <li><a href="btc.aspx">Bitcoin</a></li>
+              <li><a href="eth.aspx">Etherium</a></li>
+              <li><a href="dot.aspx">Polkadot</a></li>
+              <li><a href="bnb.aspx">BNB</a></li>
+              <li><a href="ada.aspx">ADA</a></li>
             </ul>
           </li>
           <li><a class="nav-link scrollto" href="#contact">İletişim</a></li>

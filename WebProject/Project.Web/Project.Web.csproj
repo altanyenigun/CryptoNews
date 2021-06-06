@@ -49,7 +49,31 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.AspNet.SignalR.Core, Version=2.2.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.SignalR.Core.2.2.2\lib\net45\Microsoft.AspNet.SignalR.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.SignalR.SystemWeb, Version=2.2.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.SignalR.SystemWeb.2.2.2\lib\net45\Microsoft.AspNet.SignalR.SystemWeb.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Owin, Version=4.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.4.0.1\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb, Version=4.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.4.0.1\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security, Version=4.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.4.0.1\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f0ebd12fd5e55cc5, processorArchitecture=MSIL">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -73,6 +97,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.4.1.js" />
+    <Content Include="Scripts\jquery-3.4.1.min.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.js" />
+    <Content Include="Scripts\jquery.signalR-2.2.2.js" />
+    <Content Include="Scripts\jquery.signalR-2.2.2.min.js" />
+    <Content Include="TemplateForProject\ada.aspx" />
     <Content Include="TemplateForProject\assets\css2\main.css" />
     <Content Include="TemplateForProject\assets\css2\util.css" />
     <Content Include="TemplateForProject\assets\css\style.css" />
@@ -212,21 +244,53 @@
     <Content Include="TemplateForProject\assets\vendor\remixicon\remixicon.symbol.svg" />
     <Content Include="TemplateForProject\assets\vendor\swiper\swiper-bundle.min.css" />
     <Content Include="TemplateForProject\assets\vendor\swiper\swiper-bundle.min.js" />
+    <Content Include="TemplateForProject\bnb.aspx" />
+    <Content Include="TemplateForProject\btc.aspx" />
     <Content Include="TemplateForProject\changelog.txt" />
     <Content Include="TemplateForProject\Default.aspx" />
+    <Content Include="TemplateForProject\dot.aspx" />
+    <Content Include="TemplateForProject\eth.aspx" />
     <Content Include="TemplateForProject\forms\contact.php" />
     <Content Include="TemplateForProject\forms\Readme.txt" />
-    <Content Include="TemplateForProject\inner-page.html" />
     <Content Include="TemplateForProject\Piyasa.aspx" />
-    <Content Include="TemplateForProject\portfolio-details.html" />
     <Content Include="TemplateForProject\Readme.txt" />
-    <Content Include="TemplateForProject\test.aspx" />
+    <None Include="TemplateForProject\Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="TemplateForProject\Scripts\jquery-3.4.1.js" />
+    <Content Include="TemplateForProject\Scripts\jquery-3.4.1.min.js" />
+    <Content Include="TemplateForProject\Scripts\jquery-3.4.1.slim.js" />
+    <Content Include="TemplateForProject\Scripts\jquery-3.4.1.slim.min.js" />
+    <Content Include="TemplateForProject\Scripts\jquery.signalR-2.2.2.js" />
+    <Content Include="TemplateForProject\Scripts\jquery.signalR-2.2.2.min.js" />
+    <Content Include="Sohbet.html" />
     <Content Include="TemplateForProject\UserLogin.aspx" />
     <Content Include="TemplateForProject\UserRegister.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ChatHub.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Startup.cs" />
+    <Compile Include="TemplateForProject\ada.aspx.cs">
+      <DependentUpon>ada.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TemplateForProject\ada.aspx.designer.cs">
+      <DependentUpon>ada.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TemplateForProject\bnb.aspx.cs">
+      <DependentUpon>bnb.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TemplateForProject\bnb.aspx.designer.cs">
+      <DependentUpon>bnb.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TemplateForProject\btc.aspx.cs">
+      <DependentUpon>btc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TemplateForProject\btc.aspx.designer.cs">
+      <DependentUpon>btc.aspx</DependentUpon>
+    </Compile>
     <Compile Include="TemplateForProject\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -234,19 +298,26 @@
     <Compile Include="TemplateForProject\Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
+    <Compile Include="TemplateForProject\dot.aspx.cs">
+      <DependentUpon>dot.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TemplateForProject\dot.aspx.designer.cs">
+      <DependentUpon>dot.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TemplateForProject\eth.aspx.cs">
+      <DependentUpon>eth.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TemplateForProject\eth.aspx.designer.cs">
+      <DependentUpon>eth.aspx</DependentUpon>
+    </Compile>
     <Compile Include="TemplateForProject\Piyasa.aspx.cs">
       <DependentUpon>Piyasa.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="TemplateForProject\Piyasa.aspx.designer.cs">
       <DependentUpon>Piyasa.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="TemplateForProject\test.aspx.cs">
-      <DependentUpon>test.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="TemplateForProject\test.aspx.designer.cs">
-      <DependentUpon>test.aspx</DependentUpon>
     </Compile>
     <Compile Include="TemplateForProject\UserLogin.aspx.cs">
       <DependentUpon>UserLogin.aspx</DependentUpon>
@@ -360,6 +431,10 @@
     <Content Include="TemplateForProject\assets\vendor\remixicon\remixicon.ttf" />
     <Content Include="TemplateForProject\assets\vendor\remixicon\remixicon.woff" />
     <Content Include="TemplateForProject\assets\vendor\remixicon\remixicon.woff2" />
+    <Content Include="Scripts\jquery-3.4.1.min.map" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
+    <Content Include="TemplateForProject\Scripts\jquery-3.4.1.min.map" />
+    <Content Include="TemplateForProject\Scripts\jquery-3.4.1.slim.min.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -380,6 +455,7 @@
       <Name>Proje.DataAccess</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
