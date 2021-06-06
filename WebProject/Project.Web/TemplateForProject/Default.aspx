@@ -97,31 +97,36 @@
         <div class="col-xl-2 col-md-4">
           <div class="icon-box">
             <img src="assets/img/coin/bitcoin.png" class="img-fluid" alt=""/>
-            <h3><a href="">Bitcoin</a></h3>
+            <h3><a href="">Bitcoin </a></h3>
+              <h3><a><asp:Label ID="btclabel" runat="server" Text="Label"></asp:Label></a></h3>
           </div>
         </div>
         <div class="col-xl-2 col-md-4">
           <div class="icon-box">
             <img src="assets/img/coin/etherium.png" class="img-fluid" alt=""/>
             <h3><a href="">Etherium</a></h3>
+               <h3><a><asp:Label ID="ethlabel" runat="server" Text="Label"></asp:Label></a></h3>
           </div>
         </div>
         <div class="col-xl-2 col-md-4">
           <div class="icon-box">
             <img src="assets/img/coin/dot.png" class="img-fluid" alt=""/>
             <h3><a href="">Polkadot</a></h3>
+               <h3><a><asp:Label ID="dotlabel" runat="server" Text="Label"></asp:Label></a></h3>
           </div>
         </div>
         <div class="col-xl-2 col-md-4">
           <div class="icon-box">
             <img src="assets/img/coin/bnb.png" class="img-fluid" alt=""/>
             <h3><a href="">BNB</a></h3>
+               <h3><a><asp:Label ID="bnblabel" runat="server" Text="Label"></asp:Label></a></h3>
           </div>
         </div>
         <div class="col-xl-2 col-md-4">
           <div class="icon-box">
             <img src="assets/img/coin/ada.png" class="img-fluid" alt=""/>
             <h3><a href="">Cardano</a></h3>
+               <h3><a><asp:Label ID="adalabel" runat="server" Text="Label"></asp:Label></a></h3>
           </div>
         </div>
       </div>

@@ -67,3 +67,6 @@ D:\WebTabanliProje\Gp\WebProject\Project.Web\bin\EntityFramework.xml
 D:\WebTabanliProje\Gp\WebProject\Project.Web\bin\EntityFramework.SqlServer.dll
 D:\WebTabanliProje\Gp\WebProject\Project.Web\bin\Proje.Business.dll.config
 D:\WebTabanliProje\Gp\WebProject\Project.Web\bin\EntityFramework.SqlServer.xml
+D:\WebTabanliProje\Gp\WebProject\Project.Web\bin\HtmlAgilityPack.dll
+D:\WebTabanliProje\Gp\WebProject\Project.Web\bin\HtmlAgilityPack.pdb
+D:\WebTabanliProje\Gp\WebProject\Project.Web\bin\HtmlAgilityPack.xml

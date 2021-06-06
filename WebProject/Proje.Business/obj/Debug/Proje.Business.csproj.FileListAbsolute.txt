@@ -13,3 +13,6 @@ D:\WebTabanliProje\Gp\WebProject\Proje.Business\obj\Debug\Proje.Business.pdb
 D:\WebTabanliProje\Gp\WebProject\Proje.Business\bin\Debug\Proje.Business.dll.config
 D:\WebTabanliProje\Gp\WebProject\Proje.Business\bin\Debug\EntityFramework.SqlServer.dll
 D:\WebTabanliProje\Gp\WebProject\Proje.Business\bin\Debug\EntityFramework.SqlServer.xml
+D:\WebTabanliProje\Gp\WebProject\Proje.Business\bin\Debug\HtmlAgilityPack.dll
+D:\WebTabanliProje\Gp\WebProject\Proje.Business\bin\Debug\HtmlAgilityPack.pdb
+D:\WebTabanliProje\Gp\WebProject\Proje.Business\bin\Debug\HtmlAgilityPack.xml

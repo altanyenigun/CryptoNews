@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using Proje.Business;
 
 namespace Project.Web.TemplateForProject
 {
@@ -11,7 +12,8 @@ namespace Project.Web.TemplateForProject
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            Label1.Text = "Altan Yenigün";
+            Proje.Business.VeriCekme islem = new Proje.Business.VeriCekme();
+            btclabel.Text = islem.btccek("https://www.doviz.com/kripto-paralar", "//*[@id='coins']/tbody/tr[1]/td[2]");
             
         }
     }
